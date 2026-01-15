@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import Login from "./Components/author/Login";
 import Employee from "./dashboard/Employee";
 import Admin from "./dashboard/admin";
-
+import { setLocalStorage } from "./Components/author/utils/LocalStorage";
 const App = () => {
   //useStates
   const [role, setRole] = useState("");
   const adminData = JSON.parse(localStorage.getItem("admin"));
   const emplData = JSON.parse(localStorage.getItem("employees"));
+    if(!adminData || !emplData){
+      setLocalStorage()
+    }
 //Authentication Processs
 
   const loginCheck = (email, passward) => {   
