@@ -64,6 +64,7 @@ setdescription("")
               className="border border-red-400 rounded-xl w-full p-2 focus:outline-none focus:border focus-border-red focus:shadow-none focus:bg-[#1c1c1c]"
               type="text"
               placeholder="Make a UI design"
+              value={taskTitle}
               onChange={(e) => {
                 settaskTitle(e.target.value);
               }}
@@ -72,6 +73,7 @@ setdescription("")
           <div>
             <h3> Date</h3>
             <input
+            value={date}
               className="border  border-red-400 rounded-xl w-full p-2 focus:outline-none focus:border focus-border-red focus:shadow-none focus:bg-[#1c1c1c]"
               type="date"
               onChange={(e) => {
@@ -81,7 +83,8 @@ setdescription("")
           </div>
           <div>
             <h3> Asign to</h3>
-            <input
+            <input 
+            value={assignTo}
               className="border  border-red-400 rounded-xl w-full p-2 focus:outline-none focus:border focus-border-red focus:shadow-none focus:bg-[#1c1c1c]"
               type="text"
               placeholder="Employee name"
@@ -93,6 +96,7 @@ setdescription("")
           <div>
             <h3> Category</h3>
             <input
+            value={category}
               className="border  border-red-400 rounded-xl w-full p-2 focus:outline-none focus:border focus-border-red focus:shadow-none focus:bg-[#1c1c1c]"
               type="text"
               placeholder="design,dev,etc"
@@ -107,6 +111,7 @@ setdescription("")
           <div >
             <h3> Description</h3>
             <textarea
+            value={description}
             cols={25}
             rows={6}
               onChange={(e) => {
