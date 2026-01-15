@@ -31,7 +31,11 @@ const Test = () => {
     completed: false,
     failed: false,
   };
-
+settaskTitle("");
+setdate("")
+setassignTo("")
+setcategory("")
+setdescription("")
   const employees = JSON.parse(localStorage.getItem("employees")) || [];
 
   const updatedEmployees = employees.map(emp => {
