@@ -1,5 +1,9 @@
+import { useData } from "../Context/ContextData.jsX";
+
 const TaskDetail = () => {
-let authdata = JSON.parse(localStorage.getItem("employees"));
+ const {employees} =useData()
+ 
+ 
   return (
     <div className="flex flex-col gap-3  ">
       <div className="w-full flex justify-between bg-red-500 p-2 text-[16px] font-medium rounded ">
@@ -9,7 +13,7 @@ let authdata = JSON.parse(localStorage.getItem("employees"));
         <h3 className="w-[10%] md:text-lg text-[12px]">Completed</h3>
         <h3 className="w-[10%] md:text-lg text-[12px]">Failed</h3>
       </div>
-      {authdata.map((e, idx) => {
+      {employees.map((e, idx) => {
         return (
           <div
             key={idx}

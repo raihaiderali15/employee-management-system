@@ -1,3 +1,4 @@
+
 const employees = [
   {
     id: 1,
@@ -28,7 +29,7 @@ const employees = [
     firstName: "Usman",
     email: "employee3@example.com",
     password: "123",
-    taskCount: { active: 2, newTask: 1, completed: 0, failed: 1 },
+    taskCount: { active: 1, newTask: 1, completed: 0, failed: 1 },
     tasks: [
       { active: false, newTask: true, completed: false, failed: false, taskTitle: "API testing", taskDescription: "Test authentication APIs", date: "2026-01-05", category: "Development" },
       { active: true, newTask: false, completed: false, failed: false, taskTitle: "Bug fixing", taskDescription: "Fix reported bugs", date: "2026-01-06", category: "Development" },
@@ -77,8 +78,9 @@ const admin = [
   { id: 1, email: "admin@example.com", password: "123" }
 ];
 
+
 export const setLocalStorage = () => {
-  localStorage.setItem("employees", JSON.stringify(employees));
+  localStorage.setItem("employees", JSON.stringify(employees))
   localStorage.setItem("admin", JSON.stringify(admin));
 };
 

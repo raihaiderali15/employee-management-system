@@ -1,7 +1,9 @@
 import React from 'react'
 
-const ActiveTask = ({e}) => {
+const ActiveTask = ({e,completedTask,failedTask}) => {
+
   return (
+    
      <div className="shrink-0  h-60 md:w-80 bg-yellow-400 rounded-3xl flex flex-col gap-3">
               <div>
                 <div className="flex justify-between p-2">
@@ -18,8 +20,12 @@ const ActiveTask = ({e}) => {
                 </div>
               </div>
               <div className='flex justify-around mt-2'> 
-                    <button className='bg-green-500 rounded border-none md:p-1 md:text-md text-[10px] p-1'>Mark as Completed</button>
-                    <button className='bg-red-600 rounded border-none md:p-1 md:text-md text-[10px] p-1 '>Mark as Failed</button>
+                    <button 
+                     onClick={completedTask} 
+                    className='bg-green-500 rounded border-none md:p-1 md:text-md text-[10px] p-1'>Mark as Completed</button>
+                    <button 
+                    onClick={failedTask}
+                    className='bg-red-600 rounded border-none md:p-1 md:text-md text-[10px] p-1 '>Mark as Failed</button>
 
               </div>
             </div>

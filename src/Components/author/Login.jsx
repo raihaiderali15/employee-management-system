@@ -14,7 +14,7 @@ const[Pass,setPass]=useState("")
   };
   return (
     <div className="flex justify-center items-center h-screen ">
-      <div className="bg-[#1c1c1c] md:w-100 md:h-fit px-5 py-8   h-screen  w-screen">
+      <div className="bg-[#1c1c1c] md:w-100 md:h-fit md:rounded-md px-5 py-8   h-screen  w-screen">
         <form
           onSubmit={(e) => {
             formSubmitter(e);
@@ -56,7 +56,7 @@ const[Pass,setPass]=useState("")
 
             <div>
               <button className="text-red-400 font-extralight">
-                Forget Passward
+                Forget Password
               </button>
             </div>
           </div>
@@ -72,5 +72,3 @@ const[Pass,setPass]=useState("")
 };
 
 export default Login;
-
-7;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NewTask = ({e}) => {
+const NewTask = ({e,acceptTask}) => {
   return (
      <div className="shrink-0  h-60 md:w-80 bg-blue-400 rounded-3xl flex flex-col gap-3">
               <div>
@@ -18,7 +18,7 @@ const NewTask = ({e}) => {
                 </div>
               </div>
               <div className='text-center mt-2'> 
-                    <button className='bg-yellow-600 rounded border-none md:p-1 md:text-md text-[15px] p-1'>Accept new Task</button>
+                    <button onClick={acceptTask} className='bg-yellow-600 rounded border-none md:p-1 md:text-md text-[15px] p-1'>Accept new Task</button>
               </div>
             </div>
   )
